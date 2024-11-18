@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Background Removal with ONNX Runtime</title>
-    <link rel="stylesheet" href="/src/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Background Removal</h1>
-        
-        <div id="modelStatus">Loading model...</div>
-        <div id="gpuInfo"></div>
+      <h1>Background Removal</h1>
 
-        <div class="upload-section">
-            <input type="file" id="imageUpload" accept="image/*" class="hidden">
-            <label for="imageUpload" class="upload-button">Choose Image</label>
-            <span id="fileName"></span>
-            <!-- Example button will be added here by JavaScript -->
+      <div id="modelStatus">Loading model...</div>
+      <div id="gpuInfo"></div>
+
+      <div class="upload-section">
+        <input type="file" id="imageUpload" accept="image/*" class="hidden" />
+        <label for="imageUpload" class="upload-button">Choose Image</label>
+        <span id="fileName"></span>
+        <!-- Example button will be added here by JavaScript -->
+      </div>
+
+      <div class="image-container">
+        <div class="image-box">
+          <h3>Original Image</h3>
+          <div id="originalImage"></div>
         </div>
-
-        <div class="image-container">
-            <div class="image-box">
-                <h3>Original Image</h3>
-                <div id="originalImage"></div>
-            </div>
-            <div class="image-box">
-                <h3>No Background</h3>
-                <div id="processedImage"></div>
-            </div>
+        <div class="image-box">
+          <h3>No Background</h3>
+          <div id="processedImage"></div>
         </div>
+      </div>
 
-        <div id="output" class="output"></div>
+      <div id="output" class="output"></div>
     </div>
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>
